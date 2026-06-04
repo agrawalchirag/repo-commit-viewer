@@ -94,12 +94,13 @@ The entire full-stack application can be launched with a single command.
 
 ### 1. Run using Docker Compose (Recommended)
 
-1. Make sure you have **Docker** and **Docker Compose** installed on your system.
-2. In the root project directory (`read_commit_project`), run:
+1. Make sure you have **Docker Desktop** installed on your system.
+2. First start **Docker Desktop** on your local system
+3. In the root project directory (`repo-commit-viewer`), run:
    ```bash
    docker-compose up --build
    ```
-3. Once the build completes, the services are available at:
+4. Once the build completes, the services are available at:
    - **Frontend**: [http://localhost:5173](http://localhost:5173) (Interactive UI)
    - **Backend**: [http://localhost:3001](http://localhost:3001) (API Endpoint root)
    - **Backend Health Check**: [http://localhost:3001/health](http://localhost:3001/health)
