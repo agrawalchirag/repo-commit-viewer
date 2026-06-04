@@ -1,0 +1,118 @@
+.repo-search-box {
+  padding: 1.25rem 1.5rem;
+  width: 100%;
+}
+
+.search-form {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.input-wrapper {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 1.25rem;
+  color: var(--color-text-muted);
+  pointer-events: none;
+}
+
+.repo-text-input {
+  width: 100%;
+  padding: 0.875rem 1.25rem 0.875rem 3rem;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 400;
+  outline: none;
+  transition: var(--transition-fast);
+}
+
+.repo-text-input:focus {
+  border-color: var(--accent-purple);
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.15);
+}
+
+.repo-text-input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.repo-text-input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.search-submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background: var(--accent-gradient);
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  box-shadow: var(--accent-glow);
+  white-space: nowrap;
+}
+
+.search-submit-btn:hover:not(:disabled) {
+  opacity: 0.95;
+  transform: translateY(-1px);
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.4);
+}
+
+.search-submit-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.search-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.btn-spinner {
+  animation: btnSpin 1s linear infinite;
+}
+
+.input-error-msg {
+  color: var(--color-danger);
+  font-size: 0.85rem;
+  margin-top: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes btnSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 640px) {
+  .search-form {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .search-submit-btn {
+    width: 100%;
+  }
+}
